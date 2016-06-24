@@ -11,7 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160624025960) do
+ActiveRecord::Schema.define(version: 20160624050615) do
+
+  create_table "artist_concerts", force: :cascade do |t|
+    t.integer "artist_id"
+    t.integer "concert_id"
+  end
+
+  create_table "artists", force: :cascade do |t|
+    t.string  "name"
+    t.string  "url"
+    t.integer "upcoming_events_count"
+  end
+
+  create_table "concerts", force: :cascade do |t|
+    t.integer  "web_id"
+    t.string   "url"
+    t.datetime "datetime"
+    t.string   "ticket_url"
+    t.string   "ticket_status"
+    t.string   "venue_name"
+    t.string   "venue_city"
+    t.string   "venue_country"
+  end
+
+  create_table "user_concerts", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "concert_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

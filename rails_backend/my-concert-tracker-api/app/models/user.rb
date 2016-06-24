@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :trackable, :validatable
+  has_many :user_concerts
+  has_many :concerts, through: :user_concerts
+  has_many :artists, through: :concerts
 end
