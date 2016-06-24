@@ -126,6 +126,7 @@ DEPENDENCIES
   devise (= 3.4.1)
   rails (= 4.2.6)
   rails-api
+  responders (~> 2.0)
   simple_token_authentication (= 1.6.0)
   spring
   sqlite3
