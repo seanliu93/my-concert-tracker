@@ -19,9 +19,8 @@ ActiveRecord::Schema.define(version: 20160624050615) do
   end
 
   create_table "artists", force: :cascade do |t|
-    t.string  "name"
-    t.string  "url"
-    t.integer "upcoming_events_count"
+    t.string "name"
+    t.string "url"
   end
 
   create_table "concerts", force: :cascade do |t|
