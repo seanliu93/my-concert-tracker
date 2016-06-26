@@ -1,6 +1,14 @@
 <!doctype html>
 <html>
 <head>
+    <script src="js/app/angular.js"></script>
+    <script src="js/app/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.13.4/ui-bootstrap-tpls.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.css">
+    <script src="js/app/app.js"></script>
+    <script src="js/app/controllers/LoginController.js"></script>
+    <script src="js/app/controllers/MainController.js"></script>
+    <script src="js/app/services/AuthInterceptor.js"></script>
     <meta charset="utf-8">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +16,7 @@
 </head>
 <body ng-app="app">
 
-    <script src="js/app/angular.js"></script>
-    <script src="js/app/app.js"></script>
-    <script src="js/app/controllers/MainController.js"></script>
-
-    <div class="app" ng-controller="MainController">
-      <p>Hello World!</p>
-      </div>
-
+    <div ui-view></div>
+    
 </body>
 </html>
